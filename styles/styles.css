@@ -25,6 +25,12 @@ nav{
   justify-content: space-between;
   align-items: center;
 }
+.mobile-left-img, .mobile-right-img{
+  display: none;
+}
+.nav-pattern{
+  display: none;
+}
 nav ul{
   display: flex;
   align-items: center;
@@ -54,7 +60,13 @@ nav ul button:hover{
   background-color: hsl(270, 9%, 17%);
   color: rgb(255, 255, 255);
 }
-.hamburger{
+nav .hamburger{
+  display: none;
+}
+nav .close-btn{
+  display: none;
+}
+nav .mobile-nav{
   display: none;
 }
 .hero-section{
@@ -70,6 +82,9 @@ hr{
   width: 20%;
   color: hsla(0, 0%, 98%, 0.259);
   margin-bottom: 10%;
+}
+.hero-section .left{
+  position: relative;
 }
 .hero-section .left h1{
   font-size: 60px;
@@ -176,6 +191,9 @@ hr{
   padding: 3.8%;
   margin-bottom: 10%;
 }
+.section-two-img{
+  display: none;
+}
 .section-two h1{
   font-size: 60px;
   color: rgb(255, 255, 255);
@@ -234,6 +252,7 @@ footer .top-wrapper{
 footer .top-wrapper .socials-container{
   display: flex;
   gap: 15px;
+  align-items: center;
 }
 footer .top-wrapper .socials-container svg{
   cursor: pointer;
@@ -264,6 +283,9 @@ footer .bottom-wrapper div li{
 footer .bottom-wrapper div li:hover{
   text-decoration: underline;
 }
+.footer-mobile-img{
+  display: none;
+}
 .attribution { 
   font-size: 15px; 
   text-align: center;
@@ -277,12 +299,207 @@ footer .bottom-wrapper div li:hover{
 }
 
 @media (width <= 375px) {
-  .hamburger{
+  nav .mobile-nav .hamburger{
     display: inline-flex;
+    cursor: pointer;
   }
-  nav ul{
+  nav .mobile-nav .close-btn{
+    display: none;
+    cursor: pointer;
+  }
+  nav .desktop-nav{
+    display: none;
+  }
+  nav .mobile-nav{
+    display: flex;
+  }
+  nav .mobile-nav ul{
     flex-direction: column;
     position: absolute;
     display: none;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(270, 9%, 17%);
+    z-index: 200;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 70px;
+    padding-top: 30px;
+    gap: 0;
+  }
+  nav .mobile-nav ul li{
+    color: white;
+    margin-bottom: 30px;
+    font-size: 15px;
+  }
+  nav .mobile-nav ul button{
+    border: 1px solid hsl(0, 0%, 100%);
+    width: 85%;
+    color: white;
+    font-size: 15px;
+    height: 40px;
+  }
+  .mobile-left-img{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -10px;
+  }
+  .mobile-right-img{
+    display: block;
+    position: absolute;
+    width: 27%;
+    right: 0;
+    bottom: -140px;
+    z-index: 100;
+  }
+  .nav-pattern{
+    display: inline-flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  .hero-section{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 0;
+  }
+  .hero-section .right .desktop-img{
+    display: none;
+  }
+  .hero-section hr{
+    display: none;
+  }
+  .hero-section .left{
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-section .left-img{
+    display: none;
+  }
+  .hero-section .right-img{
+    display: none;
+  }
+  .hero-section .left h1{
+    text-align: center;
+    font-size: 35px;
+  }
+  .hero-section .left p{
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .hero-section .left button{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .hero-section .right .mobile-img{
+    display: inline-block;
+    width: 100%;
+  }
+  .section-one{
+    width: 100%;
+    margin: 0;
+    padding: 25% 10% 5%;
+  }
+  .section-one hr{
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .section-one h1{
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .section-one .wrapper-one{
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-one .wrapper-one div{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .section-one .wrapper-one div h4{
+    text-align: center;
+    font-size: 16px;
+  }
+  .section-one .wrapper-one div p{
+    text-align: center;
+    font-size: 12px;
+  }
+  .section-two{
+    width: 100%;
+    flex-direction: column;
+    padding: 15% 4%;
+    margin-bottom: 100px;
+  }
+  .section-two-mobile-img{
+    display: block;
+    position: absolute;
+    width: 40%;
+    top: 0;
+    right: 0;
+  }
+  .section-two h1{
+    width: 80%;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  .section-two button{
+    width: 50%;
+  }
+  .section-two-desktop-img{
+    display: none;
+  }
+  footer .top-wrapper{
+    flex-direction: column;
+  }
+  footer .top-wrapper .socials-container{
+    margin-bottom: 30px;
+  }
+  footer hr{
+    margin-bottom: 30px;
+    color: hsla(276, 4%, 51%, 0.297);
+  }
+  footer .top-wrapper img{
+    margin-bottom: 25px;
+  }
+  footer .bottom-wrapper{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  footer .bottom-wrapper div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .bottom-wrapper div li{
+    font-size: 12px;
+  }
+  .footer-img{
+    display: none;
+  }
+  .footer-mobile-img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .attribution{
+    font-size: 12px;
   }
 }

@@ -14,13 +14,26 @@
 <body>
   <nav>
     <img src="images/logo.svg" alt="">
-    <ul>
-      <li>How we work</li>
-      <li>Blog</li>
-      <li>Account</li>
-      <button>View plans</button>
-    </ul>
-    <img src="images/icon-hamburger.svg" alt="" class="hamburger" id="hamburger">
+    <div class="desktop-nav">
+      <ul>
+        <li>How we work</li>
+        <li>Blog</li>
+        <li>Account</li>
+        <button>View plans</button>
+        <img src="images/bg-pattern-mobile-nav.svg" alt="" class="nav-pattern">
+      </ul>
+    </div>
+    <div class="mobile-nav">
+      <ul id="nav">
+        <li>How we work</li>
+        <li>Blog</li>
+        <li>Account</li>
+        <button>View plans</button>
+        <img src="images/bg-pattern-mobile-nav.svg" alt="" class="nav-pattern">
+      </ul>
+      <img src="images/icon-hamburger.svg" alt="" class="hamburger" id="hamburger">
+      <img src="images/icon-close.svg" alt="" class="close-btn" id="close-btn">
+    </div>
   </nav>
   <section class="hero-section">
     <div class="left">
@@ -28,6 +41,8 @@
       <h1>Humanizing your insurance</h1>
       <p>Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.</p>
       <button>View Plans</button>
+      <img src="images/bg-pattern-intro-left-mobile.svg" alt="" class="mobile-left-img">
+      <img src="images/bg-pattern-intro-right-mobile.svg" alt="" class="mobile-right-img">
     </div>
     <div class="right">
       <img src="images/image-intro-desktop.jpg" alt="family" class="desktop-img">
@@ -35,7 +50,6 @@
     </div>
     <img src="images/bg-pattern-intro-left-desktop.svg" alt="" class="left-img">
     <img src="images/bg-pattern-intro-right-desktop.svg" alt="" class="right-img">
-
   </section>
   <section class="section-one">
     <hr>
@@ -61,10 +75,12 @@
   <section class="section-two">
     <h1>Find out more about how we work</h1>
     <button>How we work</button>
-    <img src="images/bg-pattern-how-we-work-desktop.svg" alt="">
+    <img src="images/bg-pattern-how-we-work-desktop.svg" alt="" class="section-two-desktop-img">
+    <img src="images/bg-pattern-how-we-work-mobile.svg" alt="" class="section-two-mobile-img">
   </section>
   <footer>
     <img src="images/bg-pattern-footer-desktop.svg" alt="" class="footer-img">
+    <img src="images/bg-pattern-footer-mobile.svg" alt="" class="footer-mobile-img">
     <div class="top-wrapper">
       <img src="images/logo.svg" alt="">
       <div class="socials-container">
@@ -108,5 +124,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/Pezzyace" target="_blank">Peace Akaehomen</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
