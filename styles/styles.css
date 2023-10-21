@@ -223,6 +223,9 @@ hr{
   background-color: hsl(0, 0%, 100%);
   color: hsl(256, 26%, 20%);
 }
+section-two-mobile-img{
+  display: none;
+}
 footer{
   display: flex;
   flex-direction: column;
