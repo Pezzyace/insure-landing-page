@@ -201,7 +201,7 @@ hr{
   font-weight: 400;
   width: 50%;
 }
-.section-two img{
+.section-two-desktop-img{
   position: absolute;
   right: 0;
   z-index: 30;
@@ -223,7 +223,7 @@ hr{
   background-color: hsl(0, 0%, 100%);
   color: hsl(256, 26%, 20%);
 }
-section-two-mobile-img{
+.section-two-mobile-img{
   display: none;
 }
 footer{
